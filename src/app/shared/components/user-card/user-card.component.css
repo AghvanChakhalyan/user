@@ -1,0 +1,27 @@
+ .user-card-wrapper{
+   display:flex;
+   margin: 50px 50px;
+ }
+ .userImage{
+   width:200px;
+ }
+.info ul{
+  list-style: none;
+}
+ .info ul li{
+   padding: 10px 0;
+ }
+.circle{
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;;
+  background-color: transparent;
+  border: 1px solid gray;
+  display: inline-block;
+  margin-right: 5px;
+}
+.active-circle{
+  background-color: forestgreen;
+  border: 1px solid forestgreen;
+
+}

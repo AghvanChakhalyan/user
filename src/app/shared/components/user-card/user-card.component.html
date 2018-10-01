@@ -1,0 +1,25 @@
+<div class="user-card-wrapper">
+  <div>
+    <img appProfileImage [userImage]="userInfo.image"
+         [userGender]="userInfo.gender" src="./assets/images/user1.png"
+         alt="" class="userImage">
+  </div>
+  <div class="info">
+    <ul>
+      <li>Name: {{userInfo.name}}</li>
+      <li>Surname: {{userInfo.surname}}</li>
+      <li>age: {{userInfo.age}}</li>
+      <li>Gender: {{userInfo.gender}}</li>
+      <li>
+        <div class="circle" [ngClass]="{'active-circle': userInfo.isOnline}"></div>
+        {{userInfo.isOnline ? 'Online!' : 'Offline'}}
+      </li>
+      <li *ngIf="!userInfo.isOnline">Last visit: {{userInfo.hasLeft | date: 'dd/MM/yyyy hh:mm'}}</li>
+    </ul>
+  </div>
+  <div>
+    <button (click)="deleteUSer()" >{{userInfo.buttonDelete}}</button>
+  </div>
+</div>
+
+<ng-content></ng-content>
