@@ -9,12 +9,22 @@ import {users} from '../../../data/users';
   styleUrls: ['./user-card.component.css']
 })
 export class UserCardComponent implements OnInit {
-
+  public deleteUsersInfo = [];
   @Input()
   public userInfo: UserCardModel;
+  @Input()
+  public index: number;
 
   public deleteUSer(): void {
-    users.splice(this.userInfo.id,1);
+    this.deleteUsersInfo.push(this.userInfo);
+    users.splice(this.index, 1);
+  }
+
+  public myFunction() {
+    let input, filter;
+    input = document.getElementById('myInput');
+    filter = input.value.toUpperCase();
+    console.log(filter);
   }
 
   constructor() {

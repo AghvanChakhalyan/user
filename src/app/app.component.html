@@ -1,7 +1,12 @@
 <div class="container mt-3">
-  <input class="form-control" id="myInput" type="text" placeholder="Search..">
   <div class="main-wrapper">
-    <app-user-card *ngFor="let user of userData; let i = index" [userInfo]="user">
+    <app-user-card *ngFor="let user of userData; let i = index" [userInfo]="user" [index]="i">
     </app-user-card>
   </div>
 </div>
+<div class="container mt-3">
+  <h2>My Customers</h2>
+  <input type="text" id="myInput" onkeyup="search()" placeholder="Search for names..">
+</div>
+
+
